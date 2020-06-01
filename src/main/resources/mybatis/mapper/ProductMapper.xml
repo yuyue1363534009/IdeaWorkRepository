@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yuyue.pagehelper.mapper.ProductMapper">
+
+    <select id="productCount" resultType="java.lang.Integer">
+      select count(*) from product
+    </select>
+
+    <select id="porductListByPage" resultType="com.yuyue.pagehelper.dto.ProductDto">
+      select pid pid,product_name productName,db_source dbSource from product limit ${page},${dataNum}
+    </select>
+
+</mapper>

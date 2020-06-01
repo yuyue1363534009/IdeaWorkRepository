@@ -1,0 +1,18 @@
+.logo-back {
+    width: 280px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
+}
+
+.address-div {
+   /* margin-left: 400px;*/
+    /*padding-left: 402px;*/
+    text-align: center;
+    color: black;
+}
+
+.address-div h1 {
+    font-size: 30px;
+    font-family: cursive;
+}
