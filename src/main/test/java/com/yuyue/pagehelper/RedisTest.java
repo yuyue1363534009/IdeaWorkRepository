@@ -28,11 +28,10 @@ public class RedisTest {
     @Transactional
     public void test01() {
 
-        redisTemplate.opsForValue().set("address", "黑龙江齐齐哈尔");
+        // redisTemplate.opsForValue().set("birthday", "1996年11月11日");
         Assert.assertEquals("比较", "男", redisTemplate.opsForValue().get("sex"));
-        System.out.println(redisTemplate.opsForValue().get("name"));
-        System.out.println(redisTemplate.opsForValue().get("sex"));
         System.out.println(redisTemplate.opsForValue().get("address"));
+        System.out.println(redisTemplate.opsForValue().get("birthday"));
 
     }
 
