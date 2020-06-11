@@ -5,32 +5,32 @@ server:
 
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: com.mysql.jdbc.Driver          # mysqlÇı¶¯°ü
-    url: jdbc:mysql://47.104.107.189:3306/springcloud_db01?serverTimezone=GMT%2B8  # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: com.mysql.jdbc.Driver          # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://47.104.107.189:33306/springcloud_db01?serverTimezone=GMT%2B8  # æ•°æ®åº“åç§°
     username: root
     password: yuyue520
     dbcp2:
-      min-idle: 5                                # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                            # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                               # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 150                       # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                            # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                               # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 150                       # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
-  #ÊÓÍ¼ÅäÖÃ
+  #è§†å›¾é…ç½®
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
 
-# mybatisÅäÖÃ
+# mybatisé…ç½®
 # mybatis:
-#   type-aliases-package: com.yuyue.pagehelper.dto  # ËùÓĞEntity±ğÃûÀàËùÔÚ°ü
-#   mapper-locations: classpath:mybatis/mapper/**/*.xml       # mapperÓ³ÉäÎÄ¼ş
+#   type-aliases-package: com.yuyue.pagehelper.dto  # æ‰€æœ‰Entityåˆ«åç±»æ‰€åœ¨åŒ…
+#   mapper-locations: classpath:mybatis/mapper/**/*.xml       # mapperæ˜ å°„æ–‡ä»¶
 #   configuration:
-#     map-underscore-to-camel-case: true  # ¿ªÆôÍÕ·åÃüÃû¹æÔò
-#   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
+#     map-underscore-to-camel-case: true  # å¼€å¯é©¼å³°å‘½åè§„åˆ™
+#   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
 
-# mybatis-plusÅäÖÃ
+# mybatis-plusé…ç½®
 mybatis-plus:
   type-aliases-package: com.yuyue.pagehelper.dto
   mapper-locations: classpath:mybatis/mapper/**/*.xml

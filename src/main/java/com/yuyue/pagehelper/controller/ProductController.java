@@ -19,8 +19,10 @@ public class ProductController {
 
 
     @RequestMapping(value = "/list/{page}")
-    public ResultMessage porductListByPage(@PathVariable int page){
+    public ResultMessage porductListByPage(@PathVariable int page) {
+
         System.out.println("进入分分页控制器");
         return productService.porductListByPage(page);
     }
+
 }

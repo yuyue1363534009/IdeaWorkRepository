@@ -7,36 +7,37 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>SYST 双屿 - 双禹盛泰研发中</title>
     <script type="text/javascript" src="../../static/js/common/common/jquery.min.js"></script>
-
+    <style>
+        th,td{
+            width: 300px;
+        }
+    </style>
 </head>
-
 <body>
 <div style="background-color: #D8D9DC;width: 100%; height: 10000px">
     <div style="padding-top: 100px;text-align: center">
         <img src="../../static/image/common/menu_logo_hover.png"/>
         <div style="padding-top: 50px;"><h2 style="letter-spacing: 8px;">产品研发中··· ···</h2></div>
-        <div style="padding-top: 50px;"><a href="/page/syst_profile"
-                                           style="letter-spacing: 10px;font-size: 30px;font-weight: bold;color: blueviolet">★★★点我查看★★★</a>
+        <div style="padding-top: 50px;"><a href="/page/syst_profile" style="letter-spacing: 10px;font-size: 30px;font-weight: bold;color: blueviolet">★★★点我查看★★★</a>
         </div>
-
     </div>
     <div style="padding-top: 100px;text-align: center;">
         <form action="" method="get">
             <input type="hidden" id="nowpage" value="1"/>
+            <div style="height: 200px;">
             <table border="1" align="center">
                 <tr>
-                    <th>商品名字</th>
-                    <th>数据库</th>
+                    <th style="font-weight: bolder;font-size: 20px;color: #068104">商品名字</th>
+                    <th style="font-weight: bolder;font-size: 20px;color: #068104">数据库</th>
                 </tr>
                 <tbody id="productdata">
-
                 </tbody>
-
             </table>
-
+            </div>
+            <div>
             <button type="button" onclick="pagechange(1)">上一页</button>
             <button type="button" onclick="pagechange(2)">下一页</button>
-
+            </div>
         </form>
     </div>
 </div>
@@ -78,7 +79,6 @@
                         + "</td>"
                         + "<td>"
                             +data.data[i].dbSource + "</td></tr>"
-
                     }
                     $("#productdata").append(html);
                 }
