@@ -1,6 +1,7 @@
 package com.yuyue.pagehelper.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
@@ -18,7 +19,10 @@ public class RedisTemplateConfig {
     @Autowired
     private RedisTemplate redisTemplate;
 
+    @Bean
     public RedisTemplate redisTemplateSerializer(){
+
+        System.out.println("redis配置类");
 
         //设置序列化Key的实例化对象
         redisTemplate.setKeySerializer(new StringRedisSerializer());
