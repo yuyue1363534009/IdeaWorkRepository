@@ -8,7 +8,7 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * @Title: RedisTemplateConfig * @Description:
+ * @Title: RedisTemplateConfig * @Description:redis初始化设置编码，防止keyvalue存到服务器乱码
  * @Auther: yuyue
  * @Version: 1.0
  * @create 2020/6/11 18:23
